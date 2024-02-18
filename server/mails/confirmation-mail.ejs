@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Successful Registration</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    header {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    .body-content {
+      padding: 20px;
+    }
+
+    .footer {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <h1 style="text-align: center ; display: flex; align-items: center;
+         justify-content: center; gap: .5rem; padding: .8rem 1rem ; width: 100%; 
+          color: #fff; 
+         border-radius: .5rem;"> Welcome to Our ChatDoc.ai plateform!</h1>
+    </header>
+    
+    <div class="body-content">
+      <p>Dear <%= user.name %>💞</p>
+      
+      <p>Your registration was successful! We are excited to have you on board.</p>
+
+      <p>Thank you for choosing <b style="color: rgb(204, 0, 255);">ChatDocs.ai</b>. If you have any questions or need assistance, feel free to contact our support team.</p>
+      <p style="text-align: center;">
+        <a href="http://localhost:3000" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">Login Now</a>
+      </p>
+      <p>Best regards,</p>
+      <p>ChatDocs.ai Team</p>
+    </div>
+
+    <div class="footer">
+      <p>This email was sent from ChatDocs.ai.</p>
+    </div>
+  </div>
+</body>
+</html>
