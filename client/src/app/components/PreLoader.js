@@ -16,7 +16,7 @@ export default function PreLoader() {
       <h1 className="text-2xl sm:text-4xl mt-[8rem] text-center text-green-900  dark:text-white font-bold">
         <Typewriter
           options={{
-            strings: ["Welcome, To ChatDoc.ai"],
+            strings: ["Welcome, To MediGuide360"],
             autoStart: true,
             loop: true,
           }}

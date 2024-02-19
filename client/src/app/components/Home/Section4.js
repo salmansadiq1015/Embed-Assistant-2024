@@ -12,16 +12,16 @@ export default function Section4() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div className="flex flex-col gap-[2rem]">
           <h1 className="text-3xl sm:text-5xl font-bold text-black dark:text-white">
-            Revolutionize Customer Support with Advanced ChatDoc.ai
+            Revolutionize Customer Support with Advanced Mediguide360.ai
           </h1>
           <p className="text-justify text-gray-800 dark:text-gray-200 text-[17px]">
-            Unlock the power of ChatDoc.ai's generative AI for seamless customer
-            service. Effortlessly handle diverse inquiries across multiple
-            languages and channels. Experience enhanced efficiency and
-            effectiveness as ChatDoc.ai streamlines your customer support
+            Unlock the power of Mediguide360.ai's generative AI for seamless
+            customer service. Effortlessly handle diverse inquiries across
+            multiple languages and channels. Experience enhanced efficiency and
+            effectiveness as Mediguide360.ai streamlines your customer support
             processes, delivering exceptional service and satisfaction. Dive
-            into the future of customer service with ChatDoc.ai and elevate your
-            business operations.
+            into the future of customer service with Mediguide360.ai and elevate
+            your business operations.
           </p>
           <div className="flex items-center justify-end px-4 sm:px-8">
             <button

@@ -57,8 +57,9 @@ export default function Section1({ setOpen }) {
           <p className="text-lg sm:xl text-center font-normal mt-3">
             Create a fully automated AI chatbot like ChatGPT to help you or your
             customers get fast answers about your business with zero coding.
-            Link Chatdoc.ai chatbot to your website & Connect with your chat AI
-            companion and chat with Docs , PDFs, CSV, PPTX & many more <br />
+            Link Mediguide360.ai chatbot to your website & Connect with your
+            chat AI companion and chat with Docs , PDFs, CSV, PPTX & many more{" "}
+            <br />
             Locate, Extract and Summarize info from your documents with this
             ChatGPT based document AI chatbot and accelerate your document
             experience.

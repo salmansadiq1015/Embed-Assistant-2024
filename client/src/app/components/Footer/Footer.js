@@ -27,7 +27,7 @@ export default function Footer() {
                 textDecoration: "underline",
               }}
             >
-              ChatDoc.ai
+              Mediguide360.ai
             </h1>
           </Link>
           <p className=" text-justify">
@@ -67,7 +67,7 @@ export default function Footer() {
             </ul>
           </div>
           <h3 className=" font-medium text-center sm:text-start">
-            &copy;2024 - ChatDoc.ai - Created by{" "}
+            &copy; 2024 - Mediguide360.ai - Created by{" "}
             <Link href="https://kind-tunic-lamb.cyclic.app/" target="new">
               <span
                 className=" font-[600] cursor-pointer"

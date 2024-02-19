@@ -125,7 +125,7 @@ export default function Header({ open, setOpen }) {
                         <span className="absolute -inset-1.5" />
                         <span className="sr-only">Open user menu</span>
                         <Image
-                          className=" rounded-full"
+                          className="rounded-full"
                           src={
                             auth?.user
                               ? `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`

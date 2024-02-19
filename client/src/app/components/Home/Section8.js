@@ -166,8 +166,8 @@ export default function Section8() {
             USE CASE 2 - <span className="font-medium"> SALES ASSISTAN </span>
           </h2>
           <p className="text-lg text-zinc-200 font-light mt-3 text-justify">
-            With ChatDoc.ai, you have the ability to change the skill set of
-            your chatbot into a talented salesperson who not only helps
+            With Mediguide360.ai, you have the ability to change the skill set
+            of your chatbot into a talented salesperson who not only helps
             customers with any questions they might have, but also assists in
             the sales process.
           </p>

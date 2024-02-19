@@ -37,8 +37,8 @@ export default function Privacy() {
             <div className="flex flex-col gap-4 mt-[2rem]">
               <p className="text-[17px] text-gray-800 dark:text-gray-200">
                 This Privacy Policy describes how AI Powered Chatbots Trained On
-                Your Data ("ChatDoc.ai", "we", "us", or "our") collects, uses,
-                and shares your information when you use our website (the
+                Your Data ("Mediguide360.ai", "we", "us", or "our") collects,
+                uses, and shares your information when you use our website (the
                 "Service") or interact with our AI chatbots.
               </p>
               <p className="text-[17px] text-gray-800 dark:text-gray-200">

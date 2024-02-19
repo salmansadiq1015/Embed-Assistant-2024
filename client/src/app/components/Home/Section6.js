@@ -41,7 +41,7 @@ export default function Section6() {
               className=" text-3xl sm:text-4xl font-bold  w-full"
               style={{ textShadow: "-1px 1px 0px #888" }}
             >
-              Why Choose ChatDoc.ai?
+              Why Choose Mediguide360.ai?
             </h1>
           </div>
           {/*  */}

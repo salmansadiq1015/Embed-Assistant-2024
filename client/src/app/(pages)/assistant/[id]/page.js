@@ -16,7 +16,10 @@ import { BsClipboardCheck } from "react-icons/bs";
 import toast from "react-hot-toast";
 import { IoShareSocialSharp } from "react-icons/io5";
 import UserInfoForm from "@/app/components/UserInfoForm";
-import { useAssistant } from "@/app/context/authContext";
+import { IoClose } from "react-icons/io5";
+import { BsThreeDotsVertical } from "react-icons/bs";
+import AssistantSetting from "@/app/components/user/AssistantSetting";
+import EmailTranscript from "@/app/components/user/EmailTranscript";
 
 export default function EmbedAssistant({ params }) {
   const id = params.id;
@@ -36,6 +39,8 @@ export default function EmbedAssistant({ params }) {
   const [index, setIndex] = useState(0);
   const [questions, setQuestions] = useState([]);
   const [isShow, setIsShow] = useState(true);
+  const [showSetting, setShowSetting] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
 
   // Update Questions
   useEffect(() => {
@@ -303,40 +308,53 @@ export default function EmbedAssistant({ params }) {
           }}
         >
           <div
-            className={`sticky top-0 left-0 w-full h-[3.5rem] pt-4 text-white  px-3 sm:px-4 flex items-center `}
+            className={`sticky top-0 left-0 w-full h-[4rem] pt-4 text-white  px-3 sm:px-4 flex items-center `}
             style={{ background: botData ? `${botData?.color}` : "fuchsia" }}
           >
-            <div className="flex items-center gap-2 mb-5">
-              <div
-                className={`relative w-[2.9rem] sm:w-[3.2rem] h-[2.9rem] sm:h-[3.2rem] shadow-md shadow-gray-500/25 bg-white filter drop-shadow-md rounded-full border overflow-hidden border-fuchsia-500`}
-                style={{
-                  border: botData
-                    ? `2px solid ${botData?.color}`
-                    : "2px solid fuchsia",
-                }}
-              >
-                <Image
-                  src={
-                    botData
-                      ? `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/bot/bot-avatar/${assistantId}`
-                      : "/ChatbotF.png"
-                  }
-                  alt=""
-                  fill
-                  objectFit="fill"
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <h1
-                  className="text-2xl  sm:text-3xl font-[700] filter drop-shadow-md shadow-gray-800/40"
+            <div className=" w-full flex items-center justify-between mb-5">
+              <div className=" flex items-center gap-2">
+                <div
+                  className={`relative w-[2.7rem] sm:w-[3.2rem] h-[2.7rem] sm:h-[3.2rem] shadow-md shadow-gray-500/25 bg-white filter drop-shadow-md rounded-full border overflow-hidden border-fuchsia-500`}
                   style={{
-                    textShadow: "-.4px 1px 0px #888",
-                    // fontFamily: "Libre Baskerville",
+                    border: botData
+                      ? `2px solid ${botData?.color}`
+                      : "2px solid fuchsia",
                   }}
                 >
-                  {botData?.botName}
-                </h1>
+                  <Image
+                    src={
+                      botData
+                        ? `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/bot/bot-avatar/${assistantId}`
+                        : "/ChatbotF.png"
+                    }
+                    alt=""
+                    fill
+                    objectFit="fill"
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h1
+                    className="text-xl  sm:text-3xl font-[700] filter drop-shadow-md shadow-gray-800/40"
+                    style={{
+                      textShadow: "-.4px 1px 0px #888",
+                      // fontFamily: "Libre Baskerville",
+                    }}
+                  >
+                    {botData?.botName}
+                  </h1>
+                </div>
               </div>
+
+              <span
+                className=" py-1 px-1 sm:hidden flex items-center justify-center cursor-pointer rounded-md shadow-md hover:shadow-xl stroke-gray-300 hover:bg-gray-50/50"
+                onClick={() => setShowSetting(!showSetting)}
+              >
+                {!showSetting ? (
+                  <BsThreeDotsVertical className="h-5 w-5 cursor-pointer text-white" />
+                ) : (
+                  <IoClose className="h-5 w-5 cursor-pointer text-white" />
+                )}
+              </span>
             </div>
           </div>
           <div className="relative flex flex-col gap-1 w-full h-full ">
@@ -577,6 +595,31 @@ export default function EmbedAssistant({ params }) {
                   />
                 </div>
               )}
+            </>
+          )}
+
+          {/* ---------Setting------ */}
+          {showSetting && (
+            <>
+              <div className="absolute bottom-0 left-0 flex items-center justify-center flex-col w-full rounded-tl-lg rounded-tr-lg rounded-md shadow-md shadow-gray-300 filter drop-shadow-md z-[99] h-[300px] bg-white/95 border border-gray-300  ">
+                <AssistantSetting
+                  setShowSetting={setShowSetting}
+                  setShowEmail={setShowEmail}
+                />
+              </div>
+            </>
+          )}
+          {/* ---------Email Transscript------ */}
+          {showEmail && (
+            <>
+              <div className="absolute bottom-0 left-0 flex items-center justify-center flex-col w-full rounded-tl-lg rounded-tr-lg rounded-md shadow-md shadow-gray-300 filter drop-shadow-md z-[99] h-[300px] bg-white/95 border border-gray-300  ">
+                <EmailTranscript
+                  setShowEmail={setShowEmail}
+                  setShowSetting={setShowSetting}
+                  color={botData?.color}
+                  assistantId={assistantId}
+                />
+              </div>
             </>
           )}
         </div>

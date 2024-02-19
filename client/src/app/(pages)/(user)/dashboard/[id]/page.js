@@ -146,10 +146,13 @@ export default function UploadFiles({ params }) {
                 >
                   My Files
                 </h1>
-                <p className="text-[14px] text-gray-800 dark:text-gray-200 w-[98%] sm:w-[80%]">
-                  Supported Formats: c, cpp, css, csv, docx, gif, html, java,
-                  jpeg, jpg, js, json, md, pdf, php, png, pptx, py, rb, tar,
-                  tex, ts, txt, xlsx, xml, zip
+                <p className="text-[14px] text-gray-800 dark:text-gray-200 w-[98%] sm:w-[80%] uppercase">
+                  <b className="text-lg font-semibold capitalize">
+                    Supported Formats:
+                  </b>{" "}
+                  c, cpp, css, csv, docx, gif, html, java, jpeg, jpg, js, json,
+                  md, pdf, php, png, pptx, py, rb, tar, tex, ts, txt, xlsx, xml,
+                  zip, Website Links, Copy past text, Written text or more
                 </p>
               </div>
               <div className="">

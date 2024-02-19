@@ -1,12 +1,8 @@
 "use client";
-import { useAssistant } from "@/app/context/authContext";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import React from "react";
 
 export default function Section7() {
-  const { theme } = useTheme();
-  const { color } = useAssistant();
   return (
     <div className="relative w-full min-h-[100vh] py-3 px-2 sm:px-6 mt-[3.5rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -17,11 +13,12 @@ export default function Section7() {
             </h1>
             <p className="text-center text-gray-800 dark:text-gray-200 text-[17px]">
               Effortlessly manage fluctuations in customer inquiries and demands
-              with ChatDoc.ai's scalable automation platform. Elevate customer
-              experience consistently, fostering loyalty with seamless support.
-              Whether facing volume surges or seasonal spikes, ChatDoc.ai
-              ensures exceptional CX at every touchpoint, empowering businesses
-              to thrive amidst dynamic customer interactions.
+              with Mediguide360.ai's scalable automation platform. Elevate
+              customer experience consistently, fostering loyalty with seamless
+              support. Whether facing volume surges or seasonal spikes,
+              Mediguide360.ai ensures exceptional CX at every touchpoint,
+              empowering businesses to thrive amidst dynamic customer
+              interactions.
             </p>
           </div>
         </div>

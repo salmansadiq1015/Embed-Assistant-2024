@@ -72,9 +72,10 @@ export default function page() {
                 2. Document Interaction:
               </h3>
               <p className="text-[17px] text-gray-800 dark:text-gray-200">
-                Link Chatdoc.ai chatbot to your website and connect with your
-                chat AI companion. Interact with documents such as Docs, PDFs,
-                CSVs, PPTX files, and more directly within the chat interface.
+                Link Mediguide360.ai chatbot to your website and connect with
+                your chat AI companion. Interact with documents such as Docs,
+                PDFs, CSVs, PPTX files, and more directly within the chat
+                interface.
               </p>
             </div>
             {/*  */}
