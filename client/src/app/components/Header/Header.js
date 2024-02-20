@@ -55,6 +55,9 @@ export default function Header({ open, setOpen }) {
   };
 
   const userAvatar = `https://mediguidebackend.vercel.app/api/v1/users/user-avatar/${auth?.user?.id}`
+  const loaderProp =({ src }) => {
+    return src;
+}
   return (
     <>
       <Disclosure
@@ -133,6 +136,7 @@ export default function Header({ open, setOpen }) {
                               : "/defaultProfile.png"
                           }
                           alt="Profile"
+                          layout="fill"
                           width={32}
                           height={32}
                           style={{
@@ -141,6 +145,7 @@ export default function Header({ open, setOpen }) {
                             borderRadius: "50%",
                             border: "1px solid #000",
                             objectFit: "cover",
+                            loader={loaderProp}
                           }}
                         />
                       </Menu.Button>
