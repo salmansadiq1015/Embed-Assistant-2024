@@ -36,6 +36,10 @@ export default function AdminSidebar({ hide, setHide }) {
     // exlint-disable-next-line
   }, []);
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <div className="w-full h-screen py-2 ">
       <div className=" hidden sm:flex items-center justify-end pr-1 ">
@@ -73,6 +77,7 @@ export default function AdminSidebar({ hide, setHide }) {
             alt="Admin"
             layout="fill"
             className="rounded-full"
+            loader={loaderProp}
           />
         </div>
         <h3 className="text-[18px] font-semibold text-black dark:text-white fon">

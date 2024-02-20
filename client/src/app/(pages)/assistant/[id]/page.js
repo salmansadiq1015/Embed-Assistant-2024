@@ -285,6 +285,10 @@ export default function EmbedAssistant({ params }) {
     setIndex(index + 1);
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       {!botData?.published ? (
@@ -330,6 +334,7 @@ export default function EmbedAssistant({ params }) {
                     alt=""
                     fill
                     objectFit="fill"
+                    loader={loaderProp}
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -443,6 +448,7 @@ export default function EmbedAssistant({ params }) {
                               alt="log"
                               layout="fill"
                               objectFit="fill"
+                              loader={loaderProp}
                             />
                           </div>
                         </span>
@@ -458,6 +464,7 @@ export default function EmbedAssistant({ params }) {
                           height={32}
                           className="rounded-full border border-gray-400 bg-white shadow-xl filter drop-shadow-lg "
                           style={{ width: "30px", height: "30px" }}
+                          loader={loaderProp}
                         />
                       )}
                       {/* Indicator */}

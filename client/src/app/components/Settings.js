@@ -127,6 +127,10 @@ export default function Settings({ assistantId }) {
     }
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <div className="w-full min-h-[70vh] overflow-hidden mt-2 px-2">
       <button
@@ -311,7 +315,7 @@ export default function Settings({ assistantId }) {
                           : `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/bot/bot-avatar/${assistantId}`
                       }
                       fill
-                      // objectFit="fill"
+                      loader={loaderProp}
                       alt="avatar"
                       className="rounded-md shadow-md border border-zinc-300"
                     />
@@ -355,7 +359,7 @@ export default function Settings({ assistantId }) {
                           : `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/bot/user-avatar/${assistantId}`
                       }
                       fill
-                      // objectFit="fill"
+                      loader={loaderProp}
                       alt="avatar"
                       className="rounded-md shadow-md border border-zinc-300"
                     />
@@ -408,6 +412,7 @@ export default function Settings({ assistantId }) {
                       height={32}
                       width={32}
                       alt="avatar"
+                      loader={loaderProp}
                     />
                   </div>
                 ) : (
@@ -445,7 +450,7 @@ export default function Settings({ assistantId }) {
                             : "/user1.webp"
                         }
                         fill
-                        // objectFit="fill"
+                        loader={loaderProp}
                         alt="User"
                         className="flex float-right  rounded-full bg-zinc-300 border"
                       />

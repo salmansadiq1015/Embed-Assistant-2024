@@ -64,6 +64,11 @@ export default function UpdateAssistant({ setOpen, updateId, getAssistants }) {
       setLoading(false);
     }
   };
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <div className="w-full px-1">
       <h1 className="text-2xl font-semibold text-center">Update Assistant</h1>
@@ -89,6 +94,7 @@ export default function UpdateAssistant({ setOpen, updateId, getAssistants }) {
                   layout="fill"
                   objectFit="fill"
                   className="rounded-full"
+                  loader={loaderProp}
                 />
               )}
             </div>

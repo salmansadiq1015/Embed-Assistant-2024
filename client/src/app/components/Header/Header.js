@@ -54,6 +54,12 @@ export default function Header({ open, setOpen }) {
     toast.success("Logout Successfully", { duration: 2000 });
   };
 
+  const userAvatar = `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`;
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       <Disclosure
@@ -126,11 +132,7 @@ export default function Header({ open, setOpen }) {
                         <span className="sr-only">Open user menu</span>
                         <Image
                           className="rounded-full"
-                          src={
-                            auth?.user
-                              ? `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`
-                              : "/defaultProfile.png"
-                          }
+                          src={auth?.user ? userAvatar : "/defaultProfile.png"}
                           alt="Profile"
                           width={32}
                           height={32}
@@ -141,6 +143,7 @@ export default function Header({ open, setOpen }) {
                             border: "1px solid #000",
                             objectFit: "cover",
                           }}
+                          loader={loaderProp}
                         />
                       </Menu.Button>
                     </div>

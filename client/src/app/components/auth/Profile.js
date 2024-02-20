@@ -8,6 +8,10 @@ export default function Profile({ setRoute }) {
   const [auth] = useAuth();
   const [data, setData] = useState({});
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   // User Data
   useEffect(() => {
     const fetchData = async () => {
@@ -44,6 +48,7 @@ export default function Profile({ setRoute }) {
             layout="fill"
             objectFit="fill"
             className="rounded-full"
+            loader={loaderProp}
           />
         </div>
         <div className="flex flex-col gap-2 w-full">

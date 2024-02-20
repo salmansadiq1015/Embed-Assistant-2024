@@ -104,6 +104,11 @@ export default function Users() {
       setLoad(false);
     }
   };
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <AdminLayout>
       <div className="w-full min-h-screen py-4 px-3 dark:bg-gray-900 ">
@@ -307,6 +312,7 @@ export default function Users() {
                               src={`${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${user._id}`}
                               alt="Avatar"
                               fill
+                              loader={loaderProp}
                             />
                           </div>
                         </div>
@@ -438,6 +444,7 @@ export default function Users() {
                             src={`${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${user._id}`}
                             alt="Avatar"
                             fill
+                            loader={loaderProp}
                           />
                         </div>
                       </div>

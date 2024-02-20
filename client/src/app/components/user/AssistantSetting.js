@@ -25,7 +25,7 @@ export default function AssistantSetting({ setShowSetting, setShowEmail }) {
           }}
         >
           <HiOutlineMail className="h-6 w-6 text-gray-800" />{" "}
-          <span>Email Transcript</span>
+          <span className="text-black">Email Transcript</span>
         </div>
       </div>
       {/* Footer */}

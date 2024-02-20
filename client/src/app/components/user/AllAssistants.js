@@ -68,6 +68,10 @@ export default function AllAssistants({
     }
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       {loading ? (
@@ -185,6 +189,7 @@ export default function AllAssistants({
                       alt="log"
                       layout="fill"
                       objectFit="fill"
+                      loader={loaderProp}
                     />
                   </div>
                   <h3 className="text-lg font-semibold ">{assist?.name}</h3>

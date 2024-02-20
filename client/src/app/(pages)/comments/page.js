@@ -115,6 +115,10 @@ export default function page() {
     }
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       <Header open={open} setOpen={setOpen} />
@@ -227,6 +231,7 @@ export default function page() {
                       src={`${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${c?.userId}`}
                       fill
                       className="rounded-full"
+                      loader={loaderProp}
                     />
                   </div>
                   <div className="flex flex-col">

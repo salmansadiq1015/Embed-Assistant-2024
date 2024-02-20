@@ -60,6 +60,11 @@ export default function UpdateProfile({ setRoute, setOpen }) {
       setLoading(false);
     }
   };
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <>
       <div className="w-full flex flex-col gap-4 items-center justify-center px-2 py-4">
@@ -77,6 +82,7 @@ export default function UpdateProfile({ setRoute, setOpen }) {
               layout="fill"
               objectFit="fill"
               className="rounded-full"
+              loader={loaderProp}
             />
           )}
           <div className="absolute bottom-[4px] right-1 z-10">

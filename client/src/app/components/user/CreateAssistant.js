@@ -51,6 +51,11 @@ export default function CreateAssistant({ setOpen, getAssistants }) {
       setLoading(false);
     }
   };
+
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <div className="w-full px-1">
       <h1 className="text-2xl font-semibold text-center">Create Assistant</h1>
@@ -67,6 +72,7 @@ export default function CreateAssistant({ setOpen, getAssistants }) {
                 layout="fill"
                 objectFit="fill"
                 className="rounded-full"
+                loader={loaderProp}
               />
             </div>
             <label

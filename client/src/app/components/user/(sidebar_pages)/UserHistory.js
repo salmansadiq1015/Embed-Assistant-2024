@@ -42,6 +42,10 @@ export default function UserHistory({ messages }) {
     return date.toLocaleString();
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <div className="w-full py-2 px-2">
       <table
@@ -66,6 +70,7 @@ export default function UserHistory({ messages }) {
                   alt="log"
                   layout="fill"
                   objectFit="fill"
+                  loader={loaderProp}
                 />
               </div>
             </td>
