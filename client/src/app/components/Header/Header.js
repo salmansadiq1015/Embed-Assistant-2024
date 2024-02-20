@@ -145,8 +145,8 @@ export default function Header({ open, setOpen }) {
                             borderRadius: "50%",
                             border: "1px solid #000",
                             objectFit: "cover",
-                            loader={loaderProp}
                           }}
+                            loader={loaderProp}
                         />
                       </Menu.Button>
                     </div>
