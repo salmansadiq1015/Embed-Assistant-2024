@@ -129,7 +129,7 @@ export default function Header({ open, setOpen }) {
                           className="rounded-full"
                           src={
                             auth?.user
-                              ? `userAvatar`
+                              ? userAvatar
                               : "/defaultProfile.png"
                           }
                           alt="Profile"
