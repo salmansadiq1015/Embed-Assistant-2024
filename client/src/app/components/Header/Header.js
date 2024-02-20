@@ -54,7 +54,7 @@ export default function Header({ open, setOpen }) {
     toast.success("Logout Successfully", { duration: 2000 });
   };
 
-  const userAvatar = `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`
+  const userAvatar = `https://mediguidebackend.vercel.app/api/v1/users/user-avatar/${auth?.user?.id}`
   return (
     <>
       <Disclosure
