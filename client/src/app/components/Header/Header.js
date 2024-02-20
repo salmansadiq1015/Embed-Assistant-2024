@@ -54,6 +54,7 @@ export default function Header({ open, setOpen }) {
     toast.success("Logout Successfully", { duration: 2000 });
   };
 
+  const userAvatar = `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`
   return (
     <>
       <Disclosure
@@ -128,7 +129,7 @@ export default function Header({ open, setOpen }) {
                           className="rounded-full"
                           src={
                             auth?.user
-                              ? `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/users/user-avatar/${auth?.user?.id}`
+                              ? `userAvatar`
                               : "/defaultProfile.png"
                           }
                           alt="Profile"
