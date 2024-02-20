@@ -136,7 +136,7 @@ export default function Header({ open, setOpen }) {
                               : "/defaultProfile.png"
                           }
                           alt="Profile"
-                          layout="fill"
+                          loader={loaderProp}
                           width={32}
                           height={32}
                           style={{
@@ -146,7 +146,7 @@ export default function Header({ open, setOpen }) {
                             border: "1px solid #000",
                             objectFit: "cover",
                           }}
-                            loader={loaderProp}
+                            
                         />
                       </Menu.Button>
                     </div>
