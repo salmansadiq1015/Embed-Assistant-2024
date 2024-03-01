@@ -4,8 +4,6 @@ import {
   checkOutSection,
   deleteSubscription,
   getUserPayment,
-  newPayment,
-  sendStripePublishableKey,
   subscriptionDetails,
   subscriptionUsers,
   webhookHandler,
@@ -20,11 +18,8 @@ router.post("/create-subscription", subscriptionDetails);
 // Get
 router.get("/get-subscription", subscriptionUsers);
 
-// Stripe
-router.get("/payment/publicablekey", sendStripePublishableKey);
 
-// New Payment
-router.post("/payment", requireSignin, newPayment);
+
 
 // Payment Info
 router.get("/user-payment-info/:id", getUserPayment);
