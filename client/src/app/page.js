@@ -48,7 +48,7 @@ export default function page() {
                       height: "400px",
                       borderRadius: ".5rem",
                     }}
-                    src="https://mediguide360.vercel.app/assistant/asst_a2unUaZaJdcvUQ8lAApJ1kcr"
+                    src="http://localhost:3000/assistant/asst_a2unUaZaJdcvUQ8lAApJ1kcr"
                   ></iframe>
                 </div>
               )}
@@ -73,9 +73,9 @@ export default function page() {
           </>
           <div className="w-[full] overflow-x-hidden ">
             <Heading
-              title="ChatDoc.ai"
-              description="ChatDoc.ai is a plateform for business, teachers, professionals ,students to upload their knowledge documents and chat this documents"
-              keywords="ChatDoc.ai, MERN, SASS,Redux, Context API, education, learning, , JavaScript, React, Node, Express, MongoDB, Next JS, TypeScript, CSS"
+              title="Mediguide360.ai"
+              description="Mediguide360.ai is a plateform for business, teachers, professionals ,students to upload their knowledge documents and chat this documents"
+              keywords="Mediguide360.ai, MERN, SASS,Redux, Context API, education, learning, , JavaScript, React, Node, Express, MongoDB, Next JS, TypeScript, CSS"
             />
 
             {/* Section1 */}

@@ -16,6 +16,7 @@ import layoutRoute from "./routes/layoutRoutes.js";
 import contactRoute from "./routes/contactRoute.js";
 import commentRoute from "./routes/commentRoute.js";
 import scrapRoute from "./routes/scrapRoutes.js";
+import orderRoute from "./routes/subscriptionRoutes.js";
 
 // Dotenv Config
 dotenv.config();
@@ -44,6 +45,7 @@ app.use("/api/v1/layout", layoutRoute);
 app.use("/api/v1/contact", contactRoute);
 app.use("/api/v1/comment", commentRoute);
 app.use("/api/v1/scrap", scrapRoute);
+app.use("/api/v1/order", orderRoute);
 
 // Rest API
 app.use("/", (req, res) => {

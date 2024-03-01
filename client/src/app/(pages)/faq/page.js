@@ -1,6 +1,5 @@
 "use client";
-import Footer from "@/app/components/Footer/Footer";
-import Header from "@/app/components/Header/Header";
+import PageLayout from "@/app/components/PageLayout";
 import { useAssistant } from "@/app/context/authContext";
 import Loader from "@/app/utils/Loader";
 import axios from "axios";
@@ -41,8 +40,7 @@ export default function page() {
     );
   };
   return (
-    <>
-      <Header />
+    <PageLayout>
       <div className="w-full min-h-screen pt-[2rem] pb-[3rem] px-2 sm:px-6">
         <div className="flex flex-col gap-2 ">
           <h1
@@ -122,8 +120,6 @@ export default function page() {
           </div>
         </div>
       </div>
-      {/* Footer */}
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

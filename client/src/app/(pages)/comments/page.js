@@ -15,6 +15,7 @@ import { FiStar } from "react-icons/fi";
 import { FaRegCommentDots } from "react-icons/fa6";
 import { BiLoaderCircle } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
+import PageLayout from "@/app/components/PageLayout";
 
 // Post Comment
 const Star = ({ selected, onClick }) => {
@@ -35,7 +36,6 @@ export default function page() {
   const { theme } = useTheme();
   const { color } = useAssistant();
   const [show, setShow] = useState(false);
-  const [open, setOpen] = useState(false);
   const [posting, setPosting] = useState(false);
 
   // ----------Rating----------->
@@ -94,7 +94,7 @@ export default function page() {
   //   Post Comment
   const postComments = async () => {
     if (!userId) {
-      return setOpen(true), toast.error("Login first!");
+      return toast.error("Login first!");
     }
     setPosting(true);
     try {
@@ -120,8 +120,7 @@ export default function page() {
   };
 
   return (
-    <>
-      <Header open={open} setOpen={setOpen} />
+    <PageLayout>
       <div className="relative w-full min-h-screen pt-[2rem] pb-[3rem] px-2 sm:px-6">
         <div className="absolute top-3 right-2 cursor-pointer">
           <span>
@@ -268,7 +267,6 @@ export default function page() {
           </div>
         )}
       </div>
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

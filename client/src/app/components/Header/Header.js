@@ -196,6 +196,7 @@ export default function Header({ open, setOpen }) {
                                 </span>
                               )}
                             </Menu.Item>
+
                             <Menu.Item>
                               {({ active }) => (
                                 <span
@@ -212,6 +213,20 @@ export default function Header({ open, setOpen }) {
                                 </span>
                               )}
                             </Menu.Item>
+                            <Menu.Item>
+                              {({ active }) => (
+                                <span
+                                  className={classNames(
+                                    active ? "bg-gray-100" : "",
+                                    "block px-4 py-2 text-sm text-gray-800 cursor-pointer hover:text-blue-500 font-semibold"
+                                  )}
+                                  onClick={() => router.push("/pricing")}
+                                >
+                                  Upgrade
+                                </span>
+                              )}
+                            </Menu.Item>
+
                             {/* Nav Menu */}
                             <div className="block sm:hidden">
                               <div className="px-2">

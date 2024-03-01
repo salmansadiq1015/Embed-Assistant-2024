@@ -1,5 +1,4 @@
 import React from "react";
-// import { TbLoader3 } from "react-icons/tb";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 

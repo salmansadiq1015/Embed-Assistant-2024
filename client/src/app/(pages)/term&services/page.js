@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/app/components/Footer/Footer";
-import Header from "@/app/components/Header/Header";
+
+import PageLayout from "@/app/components/PageLayout";
 import { useAssistant } from "@/app/context/authContext";
 import { useTheme } from "next-themes";
 import React from "react";
@@ -9,8 +9,7 @@ export default function Privacy() {
   const { theme } = useTheme();
   const { color } = useAssistant();
   return (
-    <>
-      <Header />
+    <PageLayout>
       <div className="w-full min-h-[95vh] flex flex-col gap-4  pb-[1rem]">
         <div className="relative w-full h-[40vh] flex items-center justify-center term">
           <h1
@@ -178,8 +177,6 @@ export default function Privacy() {
           </div>
         </div>
       </div>
-
-      <Footer />
-    </>
+    </PageLayout>
   );
 }

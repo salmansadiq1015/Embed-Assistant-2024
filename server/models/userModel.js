@@ -28,6 +28,9 @@ const userSchema = new mongoose.Schema(
     passwordResetTokenExpire: {
       type: Date,
     },
+    subscriptionId: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
