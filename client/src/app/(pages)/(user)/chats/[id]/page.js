@@ -178,6 +178,10 @@ export default function Messages() {
     }
   };
 
+  const loaderProp = ({ src }) => {
+    return src;
+  };
+
   return (
     <Layout>
       <div className=" relative h-full border rounded-none sm:rounded-md p-1 shadow-lg">
@@ -227,6 +231,7 @@ export default function Messages() {
                             alt="log"
                             layout="fill"
                             objectFit="fill"
+                            loader={loaderProp}
                           />
                         </div>
                       </span>
