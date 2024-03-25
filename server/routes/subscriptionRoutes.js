@@ -18,9 +18,6 @@ router.post("/create-subscription", subscriptionDetails);
 // Get
 router.get("/get-subscription", subscriptionUsers);
 
-
-
-
 // Payment Info
 router.get("/user-payment-info/:id", getUserPayment);
 // Delete Payment Info After 1 Month
@@ -31,6 +28,6 @@ router.post("/add-stripe", addStripe);
 // Checkout Session
 router.post("/checkOut-Section", checkOutSection);
 // WebHooks
-router.post("/webhooks", webhookHandler);
+router.get("/webhooks", webhookHandler);
 
 export default router;

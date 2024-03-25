@@ -194,8 +194,8 @@ export const checkOutSection = async (req, res) => {
 // Webhook Handeller
 export const webhookHandler = async (req, res) => {
   try {
-    const buf = await req.text();
-    const sig = req.headers.get("stripe-signature");
+    const sig = req.headers["stripe-signature"];
+    const buf = req.body;
     const webhookSecret = process.env.STRIPE_WEBHOOKS_SECRET;
 
     let event;
@@ -208,14 +208,11 @@ export const webhookHandler = async (req, res) => {
       if (err instanceof Error) console.log(err);
       console.log(`❌ Error message: ${errorMessage}`);
 
-      return NextResponse.json(
-        {
-          error: {
-            message: `Webhook Error: ${errorMessage}`,
-          },
+      return res.status(400).json({
+        error: {
+          message: `Webhook Error: ${errorMessage}`,
         },
-        { status: 400 }
-      );
+      });
     }
 
     // Successfully constructed event.
@@ -256,13 +253,13 @@ export const webhookHandler = async (req, res) => {
         break;
     }
 
-    return res.status(200).send({
+    return res.status(200).json({
       success: true,
       message: "",
     });
   } catch (error) {
     console.log(error);
-    res.status(500).send({
+    res.status(500).json({
       success: false,
       message: "Error in webhook controller",
       error,

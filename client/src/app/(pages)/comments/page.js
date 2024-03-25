@@ -104,7 +104,7 @@ export default function page() {
       );
       getComments();
       setShow(false);
-      setText("");
+
       setStars(0);
       toast.success("Thank you for your feedback!", { duration: 3000 });
       setPosting(false);
