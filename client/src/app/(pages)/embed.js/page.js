@@ -16,7 +16,7 @@ export default function Embed() {
                 height: "400px",
                 borderRadius: ".5rem",
               }}
-              src="http://localhost:3000/assistant/asst_a2unUaZaJdcvUQ8lAApJ1kcr"
+              src="https://mediguide360.vercel.app/assistant/asst_0fW10VRnrjVHdNDlFlWGshH8"
             ></iframe>
           </div>
         )}
