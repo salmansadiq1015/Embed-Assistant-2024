@@ -14,7 +14,7 @@ export default function Share({ params }) {
   const { color } = useAssistant();
 
   const handleCopyText = () => {
-    const textToCopy = `http://localhost:3000/assistant/${assistantId}`;
+    const textToCopy = `https://mediguide360.vercel.app/assistant/${assistantId}`;
     navigator.clipboard.writeText(textToCopy);
     setIsCopied(true);
     setTimeout(() => {
@@ -24,7 +24,7 @@ export default function Share({ params }) {
   };
 
   const handleCopyIframe = () => {
-    const textToCopy = `<iframe style="width: 400px; height: 520px;  border-radius: .5rem;" src="http://localhost:3000/assistant/${assistantId}"></iframe>`;
+    const textToCopy = `<iframe style="width: 400px; height: 520px;  border-radius: .5rem;" src="https://mediguide360.vercel.app/assistant/${assistantId}"></iframe>`;
     navigator.clipboard.writeText(textToCopy);
     setIframeCopy(true);
     setTimeout(() => {
@@ -70,7 +70,7 @@ export default function Share({ params }) {
            hover:shadow-xl border-zinc-200 py-3 px-3 mt-2"
             >
               <p className="text-sm font-normal sm:text-base sm:font-medium  ">
-                http://localhost:3000/assistant/{assistantId}
+                https://mediguide360.vercel.app/assistant/{assistantId}
               </p>
               <div
                 onClick={handleCopyText}
@@ -125,7 +125,7 @@ export default function Share({ params }) {
               >
                 &lt;<span className="text-pink-600">iframe</span>{" "}
                 style=&quot;width: 400px; height: 600px;&quot; src=
-                {`"http://localhost:3000/assistant/${assistantId}"`}
+                {`"https://mediguide360.vercel.app/assistant/${assistantId}"`}
                 &gt;&lt;<span className="text-pink-600">/iframe</span>&gt;
               </p>
               <div
