@@ -30,7 +30,7 @@ export default function UploadLink({
     setLoading(true);
     try {
       const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/scrap/scrap-data-puppeter`,
+        `${process.env.NEXT_PUBLIC_SERVER_URI}/api/v1/scrap/scrap-data-cheerio`,
         { url: url }
       );
 
