@@ -38,7 +38,7 @@ export const scrapData = async (req, res) => {
 // With Cheerio
 export const scrapDataCheerio = async (req, res) => {
   try {
-    const { url } = req.query;
+    const { url } = req.body;
 
     if (!url) {
       return res.status(400).json({ error: "URL parameter is required" });
