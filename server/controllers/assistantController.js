@@ -39,7 +39,7 @@ export const createAssistant = async (req, res) => {
     const assistant = await openai.beta.assistants.create({
       name: name,
       instructions: `Provide responses only for uploaded file queries. ${instructions}`,
-      tools: [{ type: "code_interpreter" }, { type: "retrieval" }],
+      tools: [{ type: "code_interpreter" }],
       model: model || "gpt-4-1106-preview",
     });
     // tools: [{ type: "retrieval" }],
